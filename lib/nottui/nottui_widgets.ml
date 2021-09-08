@@ -1,3 +1,14 @@
+module Notty = struct
+  include Notty
+
+  module I = struct
+    include I
+
+    let char attr c a b = char ~attr c a b
+    let string attr str = string ~attr str
+  end
+end
+
 open Lwd.Infix
 open Notty
 open Nottui

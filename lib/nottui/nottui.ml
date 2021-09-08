@@ -1,3 +1,13 @@
+module Notty = struct
+  include Notty
+
+  module I = struct
+    include I
+
+    let char attr c a b = char ~attr c a b
+  end
+end
+
 open Notty
 
 let maxi x y : int = if x > y then x else y
